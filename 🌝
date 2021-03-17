@@ -1,1 +1,34 @@
+#Case-study 6
+#Belozertseva Maria
+#Adristi Fauzi
+#Alexandra Raspopova
+import turtle
+
+
+def get_color_choice(n):
+    i = 0
+    while i != 1:
+        try:
+            if n == a or n == b or n == c or n == d or n == e or n == f or n == g or n == h:
+                color = n
+                i = 1
+                print(color)
+            else:
+                n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
+                i = 0
+                l = n
+        except TypeError:
+            n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
+            i = 0
+            continue
+n = input()
+a = 'красный'
+b = 'желтый'
+c = 'оранжевый'
+d = 'синий'
+e = 'зеленый'
+f = 'голубой'
+g = 'черный'
+h = 'коричневый'
+get_color_choice(n)
 
