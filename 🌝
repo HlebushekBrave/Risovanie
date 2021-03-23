@@ -32,3 +32,37 @@ g = 'черный'
 h = 'коричневый'
 get_color_choice(n)
 
+
+
+для 2 цветов:
+def get_color_choice(n):
+    i = 0
+    while i != 1:
+        try:
+            if n == a or n == b or n == c or n == d or n == e or n == f or n == g or n == h:
+                color = n
+                i = 1
+                print(color)
+                break
+            else:
+                n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
+                i = 0
+                l = n
+        except TypeError:
+            n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
+            i = 0
+            continue
+first_color = input()
+n=first_color
+a = 'красный'
+b = 'желтый'
+c = 'оранжевый'
+d = 'синий'
+e = 'зеленый'
+f = 'голубой'
+g = 'черный'
+h = 'коричневый'
+get_color_choice(first_color)
+second_color=input()
+n=second_color
+get_color_choice(second_color)
