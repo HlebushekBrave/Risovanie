@@ -93,5 +93,5 @@ while o!=1:
     except ValueError:
         o=0
         count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
-get_num_hexagons(count_hexagon)
+counts=get_num_hexagons(count_hexagon)
 print(col1, col2)
