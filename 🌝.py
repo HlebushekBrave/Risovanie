@@ -28,7 +28,7 @@ def get_num_hexagons(count_hexagon):
         try:
             if int(count_hexagon)>=4 and int(count_hexagon)<=20:
                 i = 1
-                print(count_hexagon)
+                return count_hexagon
                 break
             else:
                 count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
@@ -94,4 +94,5 @@ while o!=1:
         o=0
         count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
 counts=get_num_hexagons(count_hexagon)
+print(counts)
 print(col1, col2)
