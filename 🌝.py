@@ -65,18 +65,18 @@ while o!=1:
 get_num_hexagons(count_hexagon)
 #продолжить
 if f_color==a or sec_color==a:
-    a='red2'
+    col='red2'
 elif f_color==b or sec_color==b:
-    b='gold'
+    col='gold'
 elif f_color==c or sec_color==c:
-    c='orange'
+    col='orange'
 elif f_color==d or sec_color==d:
-    d='RoyalBlue1'
+    col='RoyalBlue1'
 elif f_color==e or sec_color==e:
-    e='forest green'
+    col='forest green'
 elif f_color==f or sec_color==f:
-    f='DeepSkyBlue2'
+    col='DeepSkyBlue2'
 elif f_color==g or sec_color==g:
-    g='black'
+    col='black'
 elif f_color==h or sec_color==h:
-    h='saddle brown'
+    col='saddle brown'
