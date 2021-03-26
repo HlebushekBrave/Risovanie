@@ -1,7 +1,7 @@
 #Case-study 6
 #Belozertseva Maria
 #Adristi Fauzi
-#Alexandra Raspopova
+#Alexandra Raspopova (50%)
 import turtle
 import math
 
