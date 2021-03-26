@@ -12,7 +12,6 @@ def get_color_choice(n):
             if n == a or n == b or n == c or n == d or n == e or n == f or n == g or n == h:
                 color = n
                 i = 1
-                print(color)
                 return color
                 break
             else:
@@ -49,10 +48,42 @@ e = 'зеленый'
 f = 'голубой'
 g = 'черный'
 h = 'коричневый'
-get_color_choice(first_color)
+f_color=get_color_choice(first_color)
+if f_color==a:
+    col1='red2'
+elif f_color==b:
+    col1='gold'
+elif f_color==c:
+    col1='orange'
+elif f_color==d:
+    col1='RoyalBlue1'
+elif f_color==e:
+    col1='forest green'
+elif f_color==f:
+    col1='DeepSkyBlue2'
+elif f_color==g:
+    col1='black'
+elif f_color==h:
+    col1='saddle brown'
 second_color=input('Пожалуйста, введите цвет: ')
 n=second_color
-get_color_choice(second_color)
+sec_color=get_color_choice(second_color)
+if sec_color==a:
+    col2='red2'
+elif sec_color==b:
+    col2='gold'
+elif sec_color==c:
+    col2='orange'
+elif sec_color==d:
+    col2='RoyalBlue1'
+elif sec_color==e:
+    col2='forest green'
+elif sec_color==f:
+    col2='DeepSkyBlue2'
+elif sec_color==g:
+    col2='black'
+elif sec_color==h:
+    col2='saddle brown'
 o=0
 count_hexagon=(input('Пожалуйста, введите количество шестиугольников, располагаемых в ряд: '))
 while o!=1:
@@ -63,20 +94,4 @@ while o!=1:
         o=0
         count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
 get_num_hexagons(count_hexagon)
-#продолжить
-if f_color==a or sec_color==a:
-    col='red2'
-elif f_color==b or sec_color==b:
-    col='gold'
-elif f_color==c or sec_color==c:
-    col='orange'
-elif f_color==d or sec_color==d:
-    col='RoyalBlue1'
-elif f_color==e or sec_color==e:
-    col='forest green'
-elif f_color==f or sec_color==f:
-    col='DeepSkyBlue2'
-elif f_color==g or sec_color==g:
-    col='black'
-elif f_color==h or sec_color==h:
-    col='saddle brown'
+print(col1, col2)
