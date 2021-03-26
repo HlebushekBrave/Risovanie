@@ -1,6 +1,6 @@
 #Case-study 6
 #Belozertseva Maria (40%)
-#Adristi Fauzi
+#Adristi Fauzi (50%)
 #Alexandra Raspopova (60%)
 import math
 
