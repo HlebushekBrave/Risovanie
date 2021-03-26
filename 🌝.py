@@ -1,12 +1,16 @@
 #Case-study 6
-#Belozertseva Maria
+#Belozertseva Maria (40%)
 #Adristi Fauzi
-#Alexandra Raspopova (50%)
-import turtle
+#Alexandra Raspopova (60%)
 import math
 
-#для 2 цветов и количества шестиугольников (рабочее):
+
 def get_color_choice(n):
+    """
+    Gets the colors of figures
+    :param n: color of the figure
+    :return: none
+    """
     i = 0
     while i != 1:
         try:
@@ -18,16 +22,22 @@ def get_color_choice(n):
             else:
                 n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
                 i = 0
-                l = n
         except TypeError:
             n = input("'"+n+"'"+" не является верным значением. Пожалуйста, повторите попытку: ")
             i = 0
             continue
+
+
 def get_num_hexagons(count_hexagon):
+    """
+    Gets the number of hexagons
+    :param count_hexagon: number of hexagons in a row
+    :return:
+    """
     i = 0
     while i != 1:
         try:
-            if int(count_hexagon)>=4 and int(count_hexagon)<=20:
+            if 4 <= int(count_hexagon) <= 20:
                 i = 1
                 return count_hexagon
                 break
@@ -40,7 +50,16 @@ def get_num_hexagons(count_hexagon):
             count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
             continue
 
+
 def hexagon(x, y, side_len, color):
+    """
+    Draws hexagon
+    :param x: x coordinate
+    :param y: y coordinate
+    :param side_len: the length of side
+    :param color: the color of hexagon
+    :return: none
+    """
     import turtle
     # creating turtle pen
     t = turtle.Turtle()
@@ -70,29 +89,39 @@ def hexagon(x, y, side_len, color):
     t.end_fill()
     return
 
+
 def draw_hexagon(side_len, x, y, color, segment):
+    """
+    Draws all hexagons
+    :param side_len: the length of side
+    :param x: x coordinate
+    :param y: y coordinate
+    :param color: the color of hexagon
+    :param segment: the place of hexagon
+    :return: none
+    """
     import math
     import turtle as t
     k = 0
-    rad=math.radians(30)
+    rad = math.radians(30)
     d = 2*((math.cos(rad))*side_len)
     c = (math.sin(rad)*side_len)
-    col1=color[0]
-    col2=color[1]
+    col1 = color[0]
+    col2 = color[1]
     k = 1
     for i in range(0, segment):
         y1 = y + i*(side_len + c)
-        if k%2 == 0:
+        if k % 2 == 0:
             col2 = color[0]
             col1 = color[1]
         else:
             col1 = color[0]
             col2 = color[1]
-        if i%2 == 0: #from base
+        if i % 2 == 0: #from base
             for j in range(0, segment):
                 x1 = x + (j * d)
                 #y1 = y
-                if j%2 == 0:
+                if j % 2 == 0:
                     hexagon(x1, y1, side_len, col1)
                 else:
                     hexagon(x1, y1, side_len, col2)
@@ -110,7 +139,7 @@ def draw_hexagon(side_len, x, y, color, segment):
     return
 
 first_color = input('Пожалуйста, введите цвет: ')
-n=first_color
+n = first_color
 a = 'красный'
 b = 'желтый'
 c = 'оранжевый'
@@ -119,52 +148,56 @@ e = 'зеленый'
 f = 'голубой'
 g = 'черный'
 h = 'коричневый'
-f_color=get_color_choice(first_color)
-if f_color==a:
-    col1='red2'
-elif f_color==b:
-    col1='gold'
-elif f_color==c:
-    col1='orange'
-elif f_color==d:
-    col1='RoyalBlue1'
-elif f_color==e:
-    col1='forest green'
-elif f_color==f:
-    col1='DeepSkyBlue2'
-elif f_color==g:
-    col1='black'
-elif f_color==h:
-    col1='saddle brown'
-second_color=input('Пожалуйста, введите цвет: ')
-n=second_color
-sec_color=get_color_choice(second_color)
-if sec_color==a:
-    col2='red2'
-elif sec_color==b:
-    col2='gold'
-elif sec_color==c:
-    col2='orange'
-elif sec_color==d:
-    col2='RoyalBlue1'
-elif sec_color==e:
-    col2='forest green'
-elif sec_color==f:
-    col2='DeepSkyBlue2'
-elif sec_color==g:
-    col2='black'
-elif sec_color==h:
-    col2='saddle brown'
-o=0
-count_hexagon=(input('Пожалуйста, введите количество шестиугольников, располагаемых в ряд: '))
-while o!=1:
+
+f_color = get_color_choice(first_color)
+if f_color == a:
+    col1 = 'red2'
+elif f_color == b:
+    col1 = 'gold'
+elif f_color == c:
+    col1 = 'orange'
+elif f_color == d:
+    col1 = 'RoyalBlue1'
+elif f_color == e:
+    col1 = 'forest green'
+elif f_color == f:
+    col1 = 'DeepSkyBlue2'
+elif f_color == g:
+    col1 = 'black'
+elif f_color == h:
+    col1 = 'saddle brown'
+
+second_color = input('Пожалуйста, введите цвет: ')
+n = second_color
+
+sec_color = get_color_choice(second_color)
+if sec_color == a:
+    col2 = 'red2'
+elif sec_color == b:
+    col2 = 'gold'
+elif sec_color == c:
+    col2 = 'orange'
+elif sec_color == d:
+    col2 = 'RoyalBlue1'
+elif sec_color == e:
+    col2 = 'forest green'
+elif sec_color == f:
+    col2 = 'DeepSkyBlue2'
+elif sec_color == g:
+    col2 = 'black'
+elif sec_color == h:
+    col2 = 'saddle brown'
+
+o = 0
+count_hexagon = (input('Пожалуйста, введите количество шестиугольников, располагаемых в ряд: '))
+while o != 1:
     try:
-        count_hexagon=int(count_hexagon)
-        o=1
+        count_hexagon = int(count_hexagon)
+        o = 1
     except ValueError:
-        o=0
+        o = 0
         count_hexagon = input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку: ')
-counts=int(get_num_hexagons(count_hexagon))
+counts = int(get_num_hexagons(count_hexagon))
 print(col1, col2)
 
 color = [col1, col2]
@@ -172,9 +205,11 @@ color = [col1, col2]
 
 x = -200 #first point coordinate
 y = -200 #first point coordinate
-
+import turtle as t
+t.screensize(500, 500)
+t.speed(1000000)
 segment = counts
-rad=math.radians(30)
+rad = math.radians(30)
 d1 = 500 / segment
 side_len = (d1/2)-math.cos(rad)
 draw_hexagon(side_len, x, y, color, counts)
