@@ -79,20 +79,33 @@ def draw_hexagon(side_len, x, y, color, segment):
     c = (math.sin(rad)*side_len)
     col1=color[0]
     col2=color[1]
-
+    k = 1
     for i in range(0, segment):
         y1 = y + i*(side_len + c)
+        if k%2 == 0:
+            col2 = color[0]
+            col1 = color[1]
+        else:
+            col1 = color[0]
+            col2 = color[1]
         if i%2 == 0: #from base
             for j in range(0, segment):
                 x1 = x + (j * d)
                 #y1 = y
-                hexagon(x1, y1, side_len, col1)
+                if j%2 == 0:
+                    hexagon(x1, y1, side_len, col1)
+                else:
+                    hexagon(x1, y1, side_len, col2)
         else:
             for j in range(0, segment):
                 x_else = x + (d / 2)
                 x1 = x_else + j * d
                 #y1 = y + side_len + c
-                hexagon(x1, y1, side_len, col2)
+                if j % 2 == 0:
+                    hexagon(x1, y1, side_len, col1)
+                else:
+                    hexagon(x1, y1, side_len, col2)
+            k = k + 1
     t.done()
     return
 
